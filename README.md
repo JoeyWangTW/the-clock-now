@@ -1,4 +1,4 @@
-# The Clock Viewer
+# The Clock Now
 
 A Next.js web application that displays film clock images from Christian Marclay's "The Clock" based on the current time.
 

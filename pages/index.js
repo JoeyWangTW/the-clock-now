@@ -96,8 +96,8 @@ export default function Home() {
   return (
     <div className={styles.fullscreen}>
       <Head>
-        <title>The Clock Viewer</title>
-        <meta name="description" content="A viewer for Christian Marclay's The Clock" />
+        <title>The Clock Now</title>
+        <meta name="description" content="Real-time viewer for Christian Marclay's The Clock" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
