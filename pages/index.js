@@ -127,7 +127,10 @@ export default function Home() {
           
           <div className={styles.creditOverlay}>
             <p>Based on Christian Marclay's "The Clock" (2010)</p>
-            <p>Images collected by ElevenFiftyNine, The Clock Wiki</p>
+            <p>
+              Images collected by <a href="https://theclock.fandom.com/wiki/User:ElevenFiftyNine" target="_blank" rel="noopener noreferrer">ElevenFiftyNine</a>, 
+              <a href="https://theclock.fandom.com/wiki/The_Clock_Wiki" target="_blank" rel="noopener noreferrer">The Clock Wiki</a> (CC BY-SA)
+            </p>
           </div>
         </>
       )}

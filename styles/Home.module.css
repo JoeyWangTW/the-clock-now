@@ -64,7 +64,6 @@
   color: #fff;
   z-index: 10;
   text-align: right;
-  pointer-events: none;
 }
 
 .creditOverlay p {
@@ -77,4 +76,15 @@
 .creditOverlay p:last-child {
   font-size: 0.7rem;
   opacity: 0.6;
+}
+
+.creditOverlay a {
+  color: #fff;
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.creditOverlay a:hover {
+  opacity: 1;
 }

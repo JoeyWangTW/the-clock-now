@@ -25,10 +25,12 @@ npm run dev
 
 ## Data Source
 
-The application uses data from The Clock Wiki, parsed into a CSV file with the following structure:
+The application uses data from [The Clock Wiki](https://theclock.fandom.com/wiki/The_Clock_Wiki), parsed into a CSV file with the following structure:
 - time: 24-hour format time (HH:MM)
 - file_name: The original filename
 - url: Direct URL to the image
+
+All images are used under the [CC BY-SA license](https://creativecommons.org/licenses/by-sa/3.0/).
 
 ## Technologies Used
 
