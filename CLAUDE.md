@@ -1,22 +1,31 @@
-# CLAUDE.md - Guidelines for The Clock Wiki Data
+# CLAUDE.md - Guidelines for The Clock Project
 
 ## Project Overview
-This repository contains text files with HTML content from "The Clock" wiki, documenting film clips showing clocks at different times from Christian Marclay's 24-hour video art installation.
+This repository contains a Next.js web application that displays film clock images from Christian Marclay's "The Clock" art installation. The application shows images matching the current time, along with source data and extraction tools.
 
 ## Commands
-- **View Content**: Use text editors to view the large text files
-- **Search**: Use grep/find tools to search for specific films or times
-- **Validate HTML**: For HTML validation if needed, use `html-validator file.txt`
+- **Start Development Server**: `npm run dev` (runs at http://localhost:3000)
+- **Build Production Version**: `npm run build`
+- **Start Production Server**: `npm run start`
+- **Process Raw Data**: `python scripts/extract_clock_data.py`
 
-## Style Guidelines
-- **File Naming**: Follow existing pattern of `page_N.txt` where N is the page number
-- **HTML Structure**: Maintain original HTML structure from the wiki
-- **Time Format**: Use consistent time format (e.g., "1.54 a.m.", "6.30 p.m.")
-- **Film References**: Use format "Film Title time.png" for image filenames
-- **Documentation**: Include source film title and timestamp info in descriptions
-- **Links**: Preserve all internal wiki links in their original format
-- **Sorting**: Content should maintain chronological ordering by timestamp
+## Project Structure
+- **data/raw/**: Raw HTML data from The Clock Wiki
+- **scripts/**: Data processing utilities for extracting image information
+- **public/**: Generated CSV and static assets
+- **components/**: React components for the UI
+- **pages/**: Next.js pages including the main view and API endpoints
+- **styles/**: CSS modules for styling components
 
-## Error Handling
-- Report any broken image links or malformed HTML
-- Document any inconsistencies in time format or data structure
+## Development Guidelines
+- **HTML Data**: Keep raw HTML files in data/raw/ directory
+- **Data Processing**: Use Python script to extract and process data
+- **CSV Format**: Maintain time, file_name, url, base_url format in CSV
+- **Image Loading**: Use proxy API for image loading to avoid CORS issues
+- **UI Design**: Maintain minimal fullscreen interface with subtle overlays
+- **Clock Logic**: Ensure correct time display and random image selection
+
+## Credits
+Always maintain attribution to:
+- Christian Marclay for creating "The Clock" (2010)
+- ElevenFiftyNine for collecting and organizing images on The Clock Wiki
