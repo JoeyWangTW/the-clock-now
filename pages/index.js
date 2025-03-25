@@ -57,6 +57,10 @@ export default function Home() {
         } else if (matches.length === 1 || !currentEntry) {
           // Only one match, or we don't have a current entry yet
           setCurrentEntry(matches[0]);
+        } else if (timeString !== currentTime) {
+          // Time has changed - select a new random entry
+          const randomIndex = Math.floor(Math.random() * matches.length);
+          setCurrentEntry(matches[randomIndex]);
         }
         // If multiple matches and we already have an entry, keep it until the rotation interval
       }
@@ -69,7 +73,7 @@ export default function Home() {
     const interval = setInterval(updateMatchingEntries, 1000);
     
     return () => clearInterval(interval);
-  }, [clockData, currentEntry]);
+  }, [clockData, currentEntry, currentTime]);
   
   // Rotate through multiple images for the same minute
   useEffect(() => {
