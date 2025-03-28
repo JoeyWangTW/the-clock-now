@@ -93,15 +93,34 @@ export default function Home() {
     }
   }, [matchingEntries, currentEntry]);
 
+  useEffect(() => {
+    // Add overflow-hidden class to body for the home page
+    document.body.classList.add('overflow-hidden');
+    
+    // Cleanup function to remove the class when component unmounts
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, []);
+
   return (
     <div className={styles.fullscreen}>
       <Head>
-        <title>The Clock Now</title>
-        <meta name="description" content="Real-time viewer for Christian Marclay's The Clock" />
+        <title>The Clock Now | Real-time Christian Marclay Clock Images</title>
+        <meta name="description" content="Real-time viewer showing film moments from Christian Marclay's The Clock that match the current time. Experience cinema history synchronized to now." />
+        <meta name="keywords" content="Christian Marclay, The Clock, video art, cinema, time, real-time viewer" />
+        <meta property="og:title" content="The Clock Now" />
+        <meta property="og:description" content="Real-time viewer for Christian Marclay's The Clock artwork - displaying film moments that show the actual time." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://theclocknow.vercel.app" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="The Clock Now" />
+        <meta name="twitter:description" content="Real-time viewer for Christian Marclay's The Clock artwork - displaying film moments that show the actual time." />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="alternate icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="canonical" href="https://theclocknow.vercel.app" />
       </Head>
 
       {loading ? (
@@ -133,6 +152,9 @@ export default function Home() {
             <p>
               Images collected by <a href="https://theclock.fandom.com/wiki/User:ElevenFiftyNine" target="_blank" rel="noopener noreferrer">ElevenFiftyNine</a>, 
               <a href="https://theclock.fandom.com/wiki/The_Clock_Wiki" target="_blank" rel="noopener noreferrer">The Clock Wiki</a> (CC BY-SA)
+            </p>
+            <p>
+              <a href="/about" rel="noopener noreferrer">About this project</a>
             </p>
           </div>
         </>

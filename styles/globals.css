@@ -4,10 +4,14 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
   background-color: #000;
+}
+
+/* Home page needs overflow hidden, about page needs scrolling */
+.overflow-hidden {
+  overflow: hidden;
 }
 
 a {
